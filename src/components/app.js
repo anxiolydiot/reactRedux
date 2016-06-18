@@ -109,6 +109,49 @@ oke.then(function(val) {
 
 console.log(o);
 
+class whatsThat {
+  constructor (star,candy,mountain,bag,toffee,mmm) {
+    this.star = 'hola m8';
+    this.candy = candy;
+    this.mountain = mountain;
+    this.whatsThis = (bag, toffee);
+    // this.mmm = () => {console.log('oreo twinkie'); return false};
+    this.mmm = mmm;
+  }
+    ghj () {
+      console.log(this.star + this.candy);
+    }
+
+  whatsThis (bag,toffee){
+    this.bag = 'bag'
+    this.toffee = toffee
+  }
+
+}
+class jjj extends whatsThat{
+  tellMe(){
+    super.ghj();
+    console.log(this.star + this.candy + 'thx');
+  }
+}
+const holla = new jjj(null, 'im a goat');
+console.log(holla);
+console.log(holla.star);
+
+// var whoA = new iDFWY(null,'toffee a good time imo')
+// whoA.whatsThis();
+
+class iDFWY extends whatsThat {
+  whatsThis (bag,toffee){
+  super.whatsThis(bag,toffee);
+  console.log(this.bag + this.toffee);
+  }
+}
+// var whoA = new iDFWY(null,'toffee a good time imo')
+// whoA.whatsThis();
+
+
+
 
 
 
