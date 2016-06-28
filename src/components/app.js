@@ -127,16 +127,115 @@ class whatsThat {
     this.toffee = toffee
   }
 
+
 }
+
+
+
 class jjj extends whatsThat{
   tellMe(){
     super.ghj();
-    console.log(this.star + this.candy + 'thx');
+    console.log(this.star + this.candy + 'thx')
+
+
   }
 }
+
+const lll = new whatsThat({
+  star: null,
+  candy: 'beep',
+  mountain: 'boop',
+  // bag: 'bag',
+  // toffee: 'toffee',
+  whatsThis:
+    ({
+        bag: 'bag',
+        toffee: 'toffee'
+    }),
+
+  mmm: 'hiii'
+});
+
+
+console.log(lll);
+
+
+
+
 const holla = new jjj(null, 'im a goat');
+(function(){
+  Object.defineProperty(whatsThat, 'sumThingBlip',{
+  value: 'idkwhat',
+  writeable: true
+
+  });
+  const ex = (this.sumThingBlip);
+  console.log(ex)
+});
 console.log(holla);
-console.log(holla.star);
+console.log(holla.star,holla.sumThingBlip);
+// console.log(ex);
+
+
+
+var now = () => {
+  new Date().getFullYear();
+  console.log(this);
+  return false;
+}
+now();
+
+
+Promise.resolve(now).then(function(cb){
+  console.log(cb,Promise,now);
+});
+
+var promiseA = new Promise((resolve,reject) => {
+resolve('i worked') || reject(new Error( 'i done goofed'));
+this.then(value => console.log('success',value))
+.catch(error => console.log('fail',error));
+});
+
+var promiseB = new Promise((resolve,reject) => {
+resolve('i worked again') || reject(new Error( 'i done goofed the B time'));
+this.then(value => console.log('successB',value))
+.catch(error => console.log('failB',error));
+});
+
+var promiseC = new Promise((resolve,reject) => {
+resolve('i worked againC') || reject(new Error( 'i done goofed the C time'));
+this.then(value => console.log('successC',value))
+.catch(error => console.log('failC',error));
+});
+
+Promise.all([promiseA,promiseB,promiseC])
+  .then(function(results) {
+        console.log(results);
+  })
+  .catch(function(err) {
+  console.log(err);
+  throw err;
+  });
+
+  var RT = [1,4,7,5,8,0];
+
+  RT.reduceRight(function(a,b){
+    console.log(a);
+    console.log(b);
+    return [(a + b, b - b, a + a - b)];
+  });
+  RT.map(rt => {
+    _.forEach(RT, function(val, key){
+      console.log(val + 'val',key + 'key', rt)
+      return [val, key]
+    })
+
+  });
+
+  console.log(RT);
+
+// console.log(promise);
+
 
 // var whoA = new iDFWY(null,'toffee a good time imo')
 // whoA.whatsThis();
@@ -147,8 +246,19 @@ class iDFWY extends whatsThat {
   console.log(this.bag + this.toffee);
   }
 }
+
+const NNN = new iDFWY(null, 'who are am i they')
+
+console.log(NNN);
+
+class owlBark extends whatsThat{
+
+}
 // var whoA = new iDFWY(null,'toffee a good time imo')
 // whoA.whatsThis();
+
+
+
 
 
 
